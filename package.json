@@ -11,5 +11,8 @@
     "Javascript"
   ],
   "author": "Harsha sain",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.9.6"
+  }
 }

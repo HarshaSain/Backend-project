@@ -1,3 +1,4 @@
+//Middleware is like jana se phele muhjse milke jana
 import mongoose, {Schema} from "mongoose";
 import jwt from "jsonwebtoken";        //JWT is like a key used for security jiske bhi pass key hogi info mil jayagi
 import bcrypt from "bcrypt";          // helps to hass the password

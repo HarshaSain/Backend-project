@@ -1,6 +1,6 @@
 //A higher-order function is a function that takes another function as an argument OR returns a function.
 const asyncHandler = (requestHandler) => {
-    (req,res,next) => {
+    return (req,res,next) => {
         Promise.resolve(requestHandler(req,res,next)).
         catch((err) => next(err))
     }

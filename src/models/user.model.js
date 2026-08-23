@@ -60,8 +60,8 @@ userSchema.methods.isPasswordCorrect = async function
 (password){
     return await bcrypt.compare(password, this.password)
 }
-userSchema.methods.generateAccessToken = funtion(){
-    jwt.sign(
+userSchema.methods.generateAccessToken = function(){
+    return jwt.sign(
         {
             _id: this._id,
             email: this.email,
@@ -72,10 +72,10 @@ userSchema.methods.generateAccessToken = funtion(){
         {
             expiresIn: process.env.ACCESS_TOKEN_EXPIRY
         }
-    )
-}
+    );
+};
 userSchema.methods.generateRefreshToken = function(){
-    jwt.sign(
+    return jwt.sign(
         {
             _id: this._id,
         },
@@ -83,7 +83,7 @@ userSchema.methods.generateRefreshToken = function(){
         {
             expiresIn: process.env.REFRESH_TOKEN_EXPIRY
         }
-    )
-}
+    );
+};
 
 export const User = mongoose.model("User", userSchema)

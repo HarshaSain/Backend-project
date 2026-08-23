@@ -13,10 +13,14 @@ app.use(express.urlencoded({extended: true, limit:
 app.use(express.static("public"))
 app.use(cookieParser())
 
+
 //routes
 import userRouter from './routes/user.routes.js'
 
 
 //routes declaration
+app.post("/test", (req, res) => {
+    res.send("APP WORKING");
+});
 app.use("/api/v1/users", userRouter)
 export {app}

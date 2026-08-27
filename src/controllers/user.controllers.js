@@ -390,13 +390,13 @@ const getWatchHistory = asyncHandler(async(req, res) => {
                             }
                         ]
                     }
-                }
-                ]
-                    {
-                    $lookup: {
-
-                    }
                 },
+                
+                //     {
+                //     $lookup: {
+
+                //     }
+                // },
                 {
                     $addFields: {
                         owner: {
@@ -404,6 +404,7 @@ const getWatchHistory = asyncHandler(async(req, res) => {
                         }
                     }
                 }
+            ]
             }
         }
     ])
